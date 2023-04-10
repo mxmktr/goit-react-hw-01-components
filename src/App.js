@@ -8,11 +8,19 @@ import data from './data.json';
 import friends from './friends.json';
 import transactions from './transactions.json';
 
+const { username, tag, location, avatar, stats } = user;
+
 function App() {
   return (
     <>
-      <Profile user={user} />
-      <Statistics title="Upload stats" information={data} />
+      <Profile
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
+      <Statistics information={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
     </>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import css from './Statistics.module.css';
 
-export default function Statistics({title, information }) { 
+export default function Statistics({title = "Upload stats", information }) { 
   return (
   <section className={css.statistics}>
       <h2 className={css.title}>{ title}</h2>
@@ -19,7 +19,7 @@ export default function Statistics({title, information }) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   information: PropTypes.arrayOf(
     PropTypes.exact(
     {
